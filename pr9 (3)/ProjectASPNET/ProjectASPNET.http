@@ -1,0 +1,362 @@
+@ProjectASPNET_HostAddress = http://localhost:5032
+
+### product-categories
+
+GET {{ProjectASPNET_HostAddress}}/api/product-categories?page=1&pageSize=10
+Accept: application/json
+
+###
+
+GET {{ProjectASPNET_HostAddress}}/api/product-categories/1
+Accept: application/json
+
+###
+
+POST {{ProjectASPNET_HostAddress}}/api/product-categories
+Content-Type: application/json
+
+{
+  "nameOfCategory": "Витамины"
+}
+
+###
+
+PUT {{ProjectASPNET_HostAddress}}/api/product-categories/1
+Content-Type: application/json
+
+{
+  "nameOfCategory": "Витамины и БАДы"
+}
+
+###
+
+PATCH {{ProjectASPNET_HostAddress}}/api/product-categories/1
+Content-Type: application/json
+
+{
+  "nameOfCategory": "Витамины"
+}
+
+###
+
+DELETE {{ProjectASPNET_HostAddress}}/api/product-categories/1
+
+### products
+
+GET {{ProjectASPNET_HostAddress}}/api/products?page=1&pageSize=10
+Accept: application/json
+
+###
+
+GET {{ProjectASPNET_HostAddress}}/api/products/1
+Accept: application/json
+
+###
+
+POST {{ProjectASPNET_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "nameOfProduct": "Витамин C 500 мг",
+  "descriptionProduct": "Аскорбиновая кислота, 30 таблеток",
+  "price": 189.90,
+  "categoryId": 1,
+  "inStock": 120,
+  "isActive": true,
+  "imagePath": null,
+  "imageUrl": null
+}
+
+###
+
+PUT {{ProjectASPNET_HostAddress}}/api/products/1
+Content-Type: application/json
+
+{
+  "nameOfProduct": "Витамин C 1000 мг",
+  "descriptionProduct": "Аскорбиновая кислота, 60 таблеток",
+  "price": 329.00,
+  "categoryId": 1,
+  "inStock": 80,
+  "isActive": true,
+  "imagePath": null,
+  "imageUrl": null
+}
+
+###
+
+PATCH {{ProjectASPNET_HostAddress}}/api/products/1
+Content-Type: application/json
+
+{
+  "inStock": 75
+}
+
+###
+
+DELETE {{ProjectASPNET_HostAddress}}/api/products/1
+
+### roles
+
+GET {{ProjectASPNET_HostAddress}}/api/roles?page=1&pageSize=10
+Accept: application/json
+
+###
+
+GET {{ProjectASPNET_HostAddress}}/api/roles/1
+Accept: application/json
+
+###
+
+POST {{ProjectASPNET_HostAddress}}/api/roles
+Content-Type: application/json
+
+{
+  "nameOfRole": "Фармацевт"
+}
+
+###
+
+PUT {{ProjectASPNET_HostAddress}}/api/roles/1
+Content-Type: application/json
+
+{
+  "nameOfRole": "Старший фармацевт"
+}
+
+###
+
+PATCH {{ProjectASPNET_HostAddress}}/api/roles/1
+Content-Type: application/json
+
+{
+  "nameOfRole": "Фармацевт"
+}
+
+###
+
+DELETE {{ProjectASPNET_HostAddress}}/api/roles/1
+
+### users
+
+GET {{ProjectASPNET_HostAddress}}/api/users?page=1&pageSize=10
+Accept: application/json
+
+###
+
+GET {{ProjectASPNET_HostAddress}}/api/users/1
+Accept: application/json
+
+###
+
+POST {{ProjectASPNET_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "login": "ivanov",
+  "passwordUser": "Qwerty123",
+  "roleId": 1
+}
+
+###
+
+PUT {{ProjectASPNET_HostAddress}}/api/users/1
+Content-Type: application/json
+
+{
+  "login": "ivanov_a",
+  "passwordUser": "Qwerty123",
+  "roleId": 1
+}
+
+###
+
+PATCH {{ProjectASPNET_HostAddress}}/api/users/1
+Content-Type: application/json
+
+{
+  "passwordUser": "NewPass456"
+}
+
+###
+
+DELETE {{ProjectASPNET_HostAddress}}/api/users/1
+
+### carts
+
+GET {{ProjectASPNET_HostAddress}}/api/carts?page=1&pageSize=10
+Accept: application/json
+
+###
+
+GET {{ProjectASPNET_HostAddress}}/api/carts/1
+Accept: application/json
+
+###
+
+POST {{ProjectASPNET_HostAddress}}/api/carts
+Content-Type: application/json
+
+{
+  "userId": 1
+}
+
+###
+
+PUT {{ProjectASPNET_HostAddress}}/api/carts/1
+Content-Type: application/json
+
+{
+  "userId": 2
+}
+
+###
+
+PATCH {{ProjectASPNET_HostAddress}}/api/carts/1
+Content-Type: application/json
+
+{
+  "userId": 1
+}
+
+###
+
+DELETE {{ProjectASPNET_HostAddress}}/api/carts/1
+
+### cart-items
+
+GET {{ProjectASPNET_HostAddress}}/api/cart-items?page=1&pageSize=10
+Accept: application/json
+
+###
+
+GET {{ProjectASPNET_HostAddress}}/api/cart-items/1
+Accept: application/json
+
+###
+
+POST {{ProjectASPNET_HostAddress}}/api/cart-items
+Content-Type: application/json
+
+{
+  "cartId": 1,
+  "productId": 1,
+  "quantity": 2
+}
+
+###
+
+PUT {{ProjectASPNET_HostAddress}}/api/cart-items/1
+Content-Type: application/json
+
+{
+  "cartId": 1,
+  "productId": 1,
+  "quantity": 3
+}
+
+###
+
+PATCH {{ProjectASPNET_HostAddress}}/api/cart-items/1
+Content-Type: application/json
+
+{
+  "quantity": 5
+}
+
+###
+
+DELETE {{ProjectASPNET_HostAddress}}/api/cart-items/1
+
+### orders
+
+GET {{ProjectASPNET_HostAddress}}/api/orders?page=1&pageSize=10
+Accept: application/json
+
+###
+
+GET {{ProjectASPNET_HostAddress}}/api/orders/1
+Accept: application/json
+
+###
+
+POST {{ProjectASPNET_HostAddress}}/api/orders
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "status": "Новый",
+  "totalAmount": 1250.50
+}
+
+###
+
+PUT {{ProjectASPNET_HostAddress}}/api/orders/1
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "status": "В обработке",
+  "totalAmount": 1400.00
+}
+
+###
+
+PATCH {{ProjectASPNET_HostAddress}}/api/orders/1
+Content-Type: application/json
+
+{
+  "status": "Выполнен"
+}
+
+###
+
+DELETE {{ProjectASPNET_HostAddress}}/api/orders/1
+
+### order-items
+
+GET {{ProjectASPNET_HostAddress}}/api/order-items?page=1&pageSize=10
+Accept: application/json
+
+###
+
+GET {{ProjectASPNET_HostAddress}}/api/order-items/1
+Accept: application/json
+
+###
+
+POST {{ProjectASPNET_HostAddress}}/api/order-items
+Content-Type: application/json
+
+{
+  "orderId": 1,
+  "productId": 1,
+  "quantity": 2,
+  "priceAtOrder": 189.90
+}
+
+###
+
+PUT {{ProjectASPNET_HostAddress}}/api/order-items/1
+Content-Type: application/json
+
+{
+  "orderId": 1,
+  "productId": 1,
+  "quantity": 3,
+  "priceAtOrder": 179.90
+}
+
+###
+
+PATCH {{ProjectASPNET_HostAddress}}/api/order-items/1
+Content-Type: application/json
+
+{
+  "quantity": 1
+}
+
+###
+
+DELETE {{ProjectASPNET_HostAddress}}/api/order-items/1
+
